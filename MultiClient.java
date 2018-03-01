@@ -233,58 +233,6 @@ public final static int FILE_SIZE = 6022386;
 	
 
 	
-	/*public void Upload_Files(String part2) throws IOException {
-		int fileposition;
-		int bytesread;
-		DataOutputStream outToClient=new DataOutputStream(s.getOutputStream());
-		String str="path recieved";
-		outToClient.writeBytes(str+'\n');
-		String File_Upload=part2;
-		File file=new File(part2);
-		long file_length=0;
-		
-		if(file.exists())
-			file_length=file.length();
-		byte[] buffer=new byte[(int)file.length()];
-		input=s.getInputStream();
-		BufferedOutputStream outToClient1=new BufferedOutputStream(new FileOutputStream(File_Upload));
-		bytesread=input.read(buffer, 0, buffer.length);
-		fileposition=bytesread;
-		do{
-			bytesread=input.read(buffer, 0, buffer.length);
-			if(bytesread>=0) 
-				fileposition=fileposition+bytesread;
-		}while(bytesread>-1);// TODO Auto-generated method stub
-			outToClient1.write(buffer, 0, buffer.length);
-			outToClient1.flush();
-			input.close();
-			 System.out.println("File " + File_Upload + " uploaded (" + fileposition + " bytes read)");
-			 System.out.println("File Successfully uploaded");
-			 outToClient.close();
-		}
-		
-	
-	public void Download_Files(String filename) throws IOException {
-		BufferedOutputStream outToClient=new BufferedOutputStream(s.getOutputStream());
-		BufferedReader reader=new BufferedReader(new InputStreamReader(s.getInputStream()));
-		File file=new File(filename);
-		if(file.exists()) {
-			BufferedInputStream inFromClient=new BufferedInputStream(new FileInputStream(file));
-			byte[] buffer =new byte[(int)file.length()];
-			int bytesread=0;
-			while((bytesread=inFromClient.read(buffer))!=-1) {
-				outToClient.write(buffer, 0, bytesread);
-				outToClient.flush();
-				// TODO Auto-generated method stub
-			}
-		}
-		else {
-			PrintStream out=new PrintStream(s.getOutputStream());
-			out.println("File not present");
-		}
-		outToClient.close();
-		
-	}*/
 	
 
 
